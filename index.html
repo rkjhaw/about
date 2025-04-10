@@ -8,28 +8,27 @@
 <body>
 <div id="webchat-container" style="position: relative; width: 100%; height: 100%;">
   <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-  <script>
-    window.botpress.on("webchat:ready", () => {
-      window.botpress.open();
+ press.init({
+      botId: "7eb0cfab-0705-4f02-b957-1e7643a519d2",
+      clientId: "9cffdff7-5001-4f0d-a8aa-d2fa81df3e6f",
+      configuration: {
+        botName: "Rakesh Jha Webchat Bot",
+        botAvatar: "https://cdn.prod.website-files.com/637e5037f3ef83b76dcfc8f9/65b02372899b558fa6d650b8_PricingChanges.webp",
+        website: {},
+        email: {},
+        phone: {},
+        termsOfService: {},
+        privacyPolicy: {},
+        color: "#3bf5a1",
+       : "light",
+        fontFamily: "inter",
+        radius: 1
+      }
     });
 
-    window.botpress.init({
-      "botId": "7eb0cfab-0705-4f02-b957-1e7643a519d2",
-      "configuration": {
-        "botName": "Rakesh Jha Webchat Bot",
-        "botAvatar": "https://cdn.prod.website-files.com/637e5037f3ef83b76dcfc8f9/65b02372899b558fa6d650b8_Pricing%20Changes.webp",
-        "website": {},
-        "email": {},
-        "phone": {},
-        "termsOfService": {},
-        "privacyPolicy": {},
-        "color": "#3bf5a1",
-        "variant": "solid",
-        "themeMode": "light",
-        "fontFamily": "inter",
-        "radius": 1
-      },
-      "clientId": "9cffdff7-5001-4f0d-a8aa-d2fa81df3e6f"
+    window.botpress.on("webchat:ready", () => {
+      console.log("Webchat is ready");
+      window.botpress.open();
     });
   </script>
   <style>
