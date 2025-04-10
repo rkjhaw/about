@@ -6,7 +6,28 @@
 </head>
 <body>
   <p> Welcome </p>
-  <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/04/09/09/20250409091353-5SYUEES7.js"></script>
+ // <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+//<script src="https://files.bpcontent.cloud/2025/04/09/09/20250409091353-5SYUEES7.js"></script>
+  <div class="webchat" style="height: 600px; width: 400px;">
+  <iframe
+    style="height: 100%; width: 100%; border: none;"
+    srcdoc='
+    <!doctype html>
+    <html lang="en">
+      <head></head>
+      <body>
+        <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+        <script defer>
+          window.botpress.on("webchat:ready", (conversationId) => {
+            botpress.open();
+          });
+          <!-- REPLACE THE CONTENT BELOW WITH THE JAVASCRIPT CODE YOU COPIED EARILER -->
+          <script src="https://files.bpcontent.cloud/2025/04/09/09/20250409091353-5SYUEES7.js"></script>
+          <!-- REPLACE THE CONTENT ABOVE -->
+        </script>
+      </body>
+    </html>'
+  ></iframe>
+</div>
 </body>
 </html>
